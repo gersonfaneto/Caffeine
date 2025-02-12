@@ -1,3 +1,4 @@
+.clangd
 main.c
 main-*
 Makefile
