@@ -1,10 +1,12 @@
 // Copyright (C) 2025  Gerson Ferreira <gersonfaneto.dev@gmail.com>
 // See end of file for extended copyright information.
 
-#ifndef CAFFEINE_H_ #define CAFFEINE_H_
+#ifndef CAFFEINE_H_
+#define CAFFEINE_H_
 
 // #include <caffeine/containers.h>
-// #include <caffeine/network.h>
+// #include <caffeine/network.h> 
+// #include <caffeine/core.h>
 // #include <caffeine/tui.h>
 // ...
 
