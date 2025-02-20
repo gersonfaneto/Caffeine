@@ -1,4 +1,6 @@
+.direnv/
 .clangd
+compile_flags.txt
 main.c
 main-*
 Makefile
