@@ -20,6 +20,7 @@
           {
             packages = with pkgs; [
               clang-tools
+              valgrind
               # cmake
               # codespell
               # conan
