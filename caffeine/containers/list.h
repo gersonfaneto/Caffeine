@@ -19,19 +19,19 @@ typedef void* var;
 struct node_t
 {
     node_t* __next;
-    var __data;
-    size_t __size;
+    var     __data;
+    size_t  __size;
 };
 
 struct list_t
 {
     node_t* __leader;
-    size_t __lenght;
+    size_t  __lenght;
 
-    void (*clear)(list_t* self);
-    void (*insert)(list_t* self, var data, size_t size, size_t position);
-    void (*remove)(list_t* self, size_t position);
-    void (*retrieve)(list_t* self, size_t position, var* store);
+    void    (*clear) (list_t* self);
+    void   (*insert) (list_t* self, var data, size_t size, size_t position);
+    void   (*remove) (list_t* self, size_t position);
+    void (*retrieve) (list_t* self, size_t position, var* store);
 };
 
 #ifdef CAFFEINE_LIST_IMPLEMENTATION
@@ -63,12 +63,12 @@ list_t list_init(void)
 {
     return (list_t)
     {
-        .__leader = ((void*) 0),
+        .__leader = NULL,
         .__lenght = 0,
 
-        .clear = list_clear,
-        .insert = list_insert,
-        .remove = list_remove,
+        .clear    = list_clear,
+        .insert   = list_insert,
+        .remove   = list_remove,
         .retrieve = list_retrieve,
     };
 }
