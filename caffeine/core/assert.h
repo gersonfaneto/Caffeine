@@ -4,10 +4,10 @@
 #ifndef CAFFEINE_ASSERT_H
 #define CAFFEINE_ASSERT_H
 
+#ifdef CAFFEINE_ASSERT_IMPLEMENTATION
+
 #include <stdio.h>
 #include <stdlib.h>
-
-#ifdef CAFFEINE_ASSERT_IMPLEMENTATION
 
 #ifndef __FUNCTION__
   #define __FUNCTION__ __func__
