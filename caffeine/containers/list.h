@@ -36,8 +36,42 @@ struct list_t
 
 #ifdef CAFFEINE_LIST_IMPLEMENTATION
 
+#include <stdlib.h>
+#include <string.h>
+
 #define CAFFEINE_ASSERT_IMPLEMENTATION
 #include <caffeine/core/assert.h>
+
+static node_t* __node_init__(var data, size_t size)
+{
+    node_t* node = (node_t*) malloc(sizeof(node_t));
+
+    __ASSERT__(node != NULL, "Buy more RAM!");
+
+    node->__next = NULL;
+    node->__size = size;
+
+    node->__data = malloc(size);
+
+    __ASSERT__(node->__data != NULL, "Buy more RAM!");
+
+    memcpy(node->__data, data, size);
+
+    __ASSERT__(
+        memcmp(node->__data, data, size) == 0,
+        "Failed to send over!"
+    );
+
+    return node;
+}
+
+static void __node_deinit__(node_t* node)
+{
+    __ASSERT__(node != NULL, "You're joking, right?");
+    __ASSERT__(node->__data != NULL, "You MUST be joking!");
+    free(node->__data);
+    free(node);
+}
 
 static void __list_clear__(list_t* self)
 {
