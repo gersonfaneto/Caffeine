@@ -1,3 +1,6 @@
+# Project
+build/
+
 # Nix
 .direnv/
 
