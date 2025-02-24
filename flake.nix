@@ -19,8 +19,9 @@
           }
           {
             packages = with pkgs; [
-              clang-tools
+              bear
               valgrind
+              clang-tools
               # cmake
               # codespell
               # conan
