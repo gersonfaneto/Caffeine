@@ -1,6 +1,10 @@
+# Nix
 .direnv/
+
+# Dev. Tools
+.cache
 .clangd
 compile_flags.txt
-main.c
-main-*
-Makefile
+compile_commands.json
+
+# vim: sw=4 ts=4 sts=4 et tw=80 nospell :
