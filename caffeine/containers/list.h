@@ -39,22 +39,22 @@ struct list_t
 #define CAFFEINE_ASSERT_IMPLEMENTATION
 #include <caffeine/core/assert.h>
 
-static void list_clear(list_t* self)
+static void __list_clear__(list_t* self)
 {
     __TODO__();
 }
 
-static void list_insert(list_t* self, var data, size_t size, size_t position)
+static void __list_insert__(list_t* self, var data, size_t size, size_t position)
 {
     __TODO__();
 }
 
-static void list_remove(list_t* self, size_t position)
+static void __list_remove__(list_t* self, size_t position)
 {
     __TODO__();
 }
 
-static void list_retrieve(list_t* self, size_t position, var* store)
+static void __list_retrieve__(list_t* self, size_t position, var* store)
 {
     __TODO__();
 }
@@ -66,10 +66,10 @@ list_t list_init(void)
         .__leader = NULL,
         .__lenght = 0,
 
-        .clear    = list_clear,
-        .insert   = list_insert,
-        .remove   = list_remove,
-        .retrieve = list_retrieve,
+        .clear    = __list_clear__,
+        .insert   = __list_insert__,
+        .remove   = __list_remove__,
+        .retrieve = __list_retrieve__,
     };
 }
 
