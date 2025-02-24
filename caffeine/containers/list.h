@@ -4,10 +4,7 @@
 #ifndef CAFFEINE_LIST_H
 #define CAFFEINE_LIST_H
 
-#include <stdio.h>
-#include <stdint.h>
-
-#include <caffeine/core/assert.h>
+#include <stddef.h>
 
 typedef struct node_t node_t;
 typedef struct list_t list_t;
@@ -38,6 +35,9 @@ struct list_t
 };
 
 #ifdef CAFFEINE_LIST_IMPLEMENTATION
+
+#define CAFFEINE_ASSERT_IMPLEMENTATION
+#include <caffeine/core/assert.h>
 
 static void list_clear(list_t* self)
 {
