@@ -31,6 +31,9 @@
               # lcov
               # vcpkg
               # vcpkg-tool
+              efm-langserver
+              shfmt
+              bash-language-server
             ] ++ (if system == "aarch64-darwin" then [ ] else [ gdb ]);
           };
       });
