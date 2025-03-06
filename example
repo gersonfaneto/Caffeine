@@ -1,0 +1,56 @@
+#!/usr/bin/env sh
+
+# set -e
+# set -x
+
+build_example() {
+	example=$1
+
+	bear --output build/compile_commands.json \
+		-- \
+		cc -o "build/$example" \
+		"examples/$example.c" \
+		-I. \
+		"${CFLAGS:-"-D__HACK__"}" \
+		-std=c11 \
+		-Wall -Wextra -Werror \
+		-Wno-unused-variable \
+		-Wno-unused-function \
+		-Wno-unused-parameter
+}
+
+run_example() {
+	example=$1
+
+	if [ -f "./build/$example" ]; then
+		./build/"$example"
+	else
+		echo "File not found :: ./build/$example"
+	fi
+}
+
+main() {
+	if [ ! -d "./build" ]; then
+		mkdir build
+	fi
+
+	if [ ! $# -eq 2 ]; then
+		echo "Usage: $0 [action] [name]"
+		exit 1
+	fi
+
+	case $1 in
+	build)
+		build_example "$2"
+		;;
+	run)
+		run_example "$2"
+		;;
+	*)
+		echo "Usage: $0 [action] [name]"
+		exit 1
+		;;
+	esac
+}
+
+main "$@"
