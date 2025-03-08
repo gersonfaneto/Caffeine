@@ -1,5 +1,7 @@
+# Based on :: https://github.com/the-nix-way/dev-templates
+
 {
-  description = "A Nix-flake-based C/C++ development environment";
+  description = "Caffeine by @gersonfaneto";
 
   inputs.nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1.*.tar.gz";
 
@@ -19,21 +21,17 @@
           }
           {
             packages = with pkgs; [
+              # C
               bear
               valgrind
               clang-tools
-              # cmake
-              # codespell
-              # conan
-              # cppcheck
-              # doxygen
-              # gtest
-              # lcov
-              # vcpkg
-              # vcpkg-tool
-              efm-langserver
+
+              # Bash
               shfmt
               bash-language-server
+
+              # Others
+              efm-langserver
             ] ++ (if system == "aarch64-darwin" then [ ] else [ gdb ]);
           };
       });
