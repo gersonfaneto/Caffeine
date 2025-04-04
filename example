@@ -12,7 +12,7 @@ build_example() {
 		"examples/$example.c" \
 		-I. \
 		"${CFLAGS:-"-D__HACK__"}" \
-		-std=c11 \
+		-std=gnu90 \
 		-Wall -Wextra -Werror \
 		-Wno-unused-variable \
 		-Wno-unused-function \
