@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
-# set -e
-# set -x
+set -e
+set -x
 
 build_example() {
 	example=$1
@@ -12,8 +12,8 @@ build_example() {
 		"examples/$example.c" \
 		-I. \
 		"${CFLAGS:-"-D__HACK__"}" \
-		-std=gnu90 \
-		-Wall -Wextra -Werror \
+		-std=gnu99 \
+		-Wall -Wextra -Werror -Wpedantic \
 		-Wno-unused-variable \
 		-Wno-unused-function \
 		-Wno-unused-parameter
