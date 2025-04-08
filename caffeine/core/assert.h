@@ -34,7 +34,7 @@
 
 #endif // ifndef CAFFEINE_ASSERT_H
 
-// Caffeine :: Boost Your C Development.
+// Caffeine :: Boost your C development.
 // Copyright (C) 2025  Gerson Ferreira <gersonfaneto.dev@gmail.com>
 //
 // This file is part of Caffeine.
@@ -53,4 +53,3 @@
 // along with Caffeine.  If not, see <https://www.gnu.org/licenses/>.
 
 // vim: sw=4 ts=4 sts=4 et tw=80 nospell :
-

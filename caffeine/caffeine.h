@@ -23,7 +23,7 @@ static inline void say_hello(const char* name)
 
 #endif // ifndef CAFFEINE_H_
 
-// Caffeine :: Boost Your C Development.
+// Caffeine :: Boost your C development.
 // Copyright (C) 2025  Gerson Ferreira <gersonfaneto.dev@gmail.com>
 //
 // This file is part of Caffeine.

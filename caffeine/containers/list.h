@@ -113,7 +113,7 @@ list_t list_init(void)
 
 #endif // ifndef CAFFEINE_LIST_H
 
-// Caffeine :: Boost Your C Development.
+// Caffeine :: Boost your C development.
 // Copyright (C) 2025  Gerson Ferreira <gersonfaneto.dev@gmail.com>
 //
 // This file is part of Caffeine.
